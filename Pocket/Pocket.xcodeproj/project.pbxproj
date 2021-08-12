@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D36136CA26C4AC3D00A24CC7 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = D36136C926C4AC3D00A24CC7 /* Realm */; };
+		D36136CC26C4AC3D00A24CC7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D36136CB26C4AC3D00A24CC7 /* RealmSwift */; };
+		D36136CE26C4ACB100A24CC7 /* pocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36136CD26C4ACB100A24CC7 /* pocket.swift */; };
+		D36136D026C4C5FF00A24CC7 /* addPocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36136CF26C4C5FF00A24CC7 /* addPocketViewController.swift */; };
 		D3D4E44A2650C2450005B9B9 /* PageViewContoroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D4E4492650C2450005B9B9 /* PageViewContoroller.swift */; };
 		D3D4E44C2650CF780005B9B9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D4E44B2650CF780005B9B9 /* SecondViewController.swift */; };
 		D3D4E44E2650CF8E0005B9B9 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D4E44D2650CF8E0005B9B9 /* ThirdViewController.swift */; };
@@ -42,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D36136CD26C4ACB100A24CC7 /* pocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pocket.swift; sourceTree = "<group>"; };
+		D36136CF26C4C5FF00A24CC7 /* addPocketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPocketViewController.swift; sourceTree = "<group>"; };
 		D3D4E4492650C2450005B9B9 /* PageViewContoroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewContoroller.swift; sourceTree = "<group>"; };
 		D3D4E44B2650CF780005B9B9 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		D3D4E44D2650CF8E0005B9B9 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D36136CC26C4AC3D00A24CC7 /* RealmSwift in Frameworks */,
+				D36136CA26C4AC3D00A24CC7 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +101,7 @@
 		D3E25BDF2650012900C94C9E = {
 			isa = PBXGroup;
 			children = (
+				D36136CD26C4ACB100A24CC7 /* pocket.swift */,
 				D3E25BEA2650012A00C94C9E /* Pocket */,
 				D3E25C012650012D00C94C9E /* PocketTests */,
 				D3E25C0C2650012D00C94C9E /* PocketUITests */,
@@ -127,6 +136,7 @@
 				D3E7D13926537E6400A8A856 /* launchScreen.png */,
 				D3E25BF62650012D00C94C9E /* LaunchScreen.storyboard */,
 				D3E25BF92650012D00C94C9E /* Info.plist */,
+				D36136CF26C4C5FF00A24CC7 /* addPocketViewController.swift */,
 			);
 			path = Pocket;
 			sourceTree = "<group>";
@@ -165,6 +175,10 @@
 			dependencies = (
 			);
 			name = Pocket;
+			packageProductDependencies = (
+				D36136C926C4AC3D00A24CC7 /* Realm */,
+				D36136CB26C4AC3D00A24CC7 /* RealmSwift */,
+			);
 			productName = Pocket;
 			productReference = D3E25BE82650012A00C94C9E /* Pocket.app */;
 			productType = "com.apple.product-type.application";
@@ -236,6 +250,9 @@
 				Base,
 			);
 			mainGroup = D3E25BDF2650012900C94C9E;
+			packageReferences = (
+				D36136C826C4AC3D00A24CC7 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = D3E25BE92650012A00C94C9E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -282,12 +299,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3E25BF02650012A00C94C9E /* ViewController.swift in Sources */,
+				D36136CE26C4ACB100A24CC7 /* pocket.swift in Sources */,
 				D3E25BEC2650012A00C94C9E /* AppDelegate.swift in Sources */,
 				D3E25BEE2650012A00C94C9E /* SceneDelegate.swift in Sources */,
 				D3D4E4542651EF1F0005B9B9 /* IndexViewController.swift in Sources */,
 				D3D4E44C2650CF780005B9B9 /* SecondViewController.swift in Sources */,
 				D3D4E44E2650CF8E0005B9B9 /* ThirdViewController.swift in Sources */,
 				D3D4E44A2650C2450005B9B9 /* PageViewContoroller.swift in Sources */,
+				D36136D026C4C5FF00A24CC7 /* addPocketViewController.swift in Sources */,
 				D3D4E4522650DC3D0005B9B9 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -617,6 +636,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D36136C826C4AC3D00A24CC7 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D36136C926C4AC3D00A24CC7 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D36136C826C4AC3D00A24CC7 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		D36136CB26C4AC3D00A24CC7 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D36136C826C4AC3D00A24CC7 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D3E25BE02650012900C94C9E /* Project object */;
 }
