@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         // first time to launch this app
+        
+        let config = Realm.Configuration(
+            schemaVersion: 1,
+            migrationBlock: nil,
+            deleteRealmIfMigrationNeeded: true)
+        
+        Realm.Configuration.defaultConfiguration = config
+        
         let defaults = UserDefaults.standard
         let dic = ["firstLaunch": true]
         defaults.register(defaults: dic)

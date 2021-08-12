@@ -9,61 +9,51 @@ import UIKit
 
 class selectSubjectViewController: UIViewController {
     
-    var subject: String = ""
+//    var subject: String = ""
     
 
     @IBAction func tap1(){
-        let vc = self.presentingViewController as! newPocketViewController
-        subject = "国語"
-        vc.var1 = subject
+
+
     }
     
     @IBAction func tap2(){
-        let vc = self.presentingViewController as! newPocketViewController
-        subject = "数学"
-        vc.var1 = subject
+
+
     }
     
     @IBAction func tap3(){
-        let vc = self.presentingViewController as! newPocketViewController
-        subject = "理科"
-        vc.var1 = subject
+
     }
     
     @IBAction func tap4(){
-        let vc = self.presentingViewController as! newPocketViewController
-        subject = "社会"
-        vc.var1 = subject
+//        let preNC = self.presentingViewController as! UINavigationController
+//         let preNC = self.navigationController as! UINavigationController
+//        let preVC = preNC.viewControllers[preNC.viewControllers.count - 2] as! newPocketViewController
+//        subject = "社会"
+//        preVC.var1 = subject  //ここで値渡し
     }
     
     @IBAction func tap5(){
-        let vc = self.presentingViewController as! newPocketViewController
-        subject = "哲学"
-        vc.var1 = subject
+
     }
     
     @IBAction func tap6(){
-        let vc = self.presentingViewController as! newPocketViewController
-        subject = "体育"
-        vc.var1 = subject
+
+
     }
     
     @IBAction func tap7(){
-        let vc = self.presentingViewController as! newPocketViewController
-        subject = "技術"
-        vc.var1 = subject
+
+
     }
     
     @IBAction func tap8(){
-        let vc = self.presentingViewController as! newPocketViewController
-        subject = "アイデア"
-        vc.var1 = subject
+
     }
     
     @IBAction func tap9(){
-        let vc = self.presentingViewController as! newPocketViewController
-        subject = "その他"
-        vc.var1 = subject
+
     }
     
     

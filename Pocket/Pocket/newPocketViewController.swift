@@ -6,12 +6,34 @@
 //
 
 import UIKit
+import RealmSwift
 
-class newPocketViewController: UIViewController {
+class newPocketViewController: UIViewController,UITextFieldDelegate {
+    
+    let realm = try! Realm()
+    
+    @IBOutlet var titleTextField: UITextField!
+    @IBOutlet var contentTextField: UITextField!
     
     @IBOutlet var label: UILabel!
     var var1 :String!
     
+    @IBAction func save(){
+        let now: Date = Date()
+        let title: String = titleTextField.text!
+        let content: String = contentTextField.text!
+        let subject: String = label.text ?? ""
+        
+            let newPocket = Pocket()
+        newPocket.title = title
+        newPocket.content = content
+        newPocket.time = now
+        newPocket.subject = subject
+            
+            try! realm.write {
+                realm.add(newPocket)
+            }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

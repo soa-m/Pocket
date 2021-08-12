@@ -16,20 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zhh-DW-zEi">
-                                <rect key="frame" x="-355.5" y="0.0" width="1125" height="896"/>
-                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Zhh-DW-zEi" secondAttribute="height" multiplier="1125:896" id="cgL-28-SB5"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="xBn-hv-PEn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Zhh-DW-zEi" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="FSW-mI-ICX"/>
-                            <constraint firstAttribute="bottom" secondItem="Zhh-DW-zEi" secondAttribute="bottom" id="bMc-RX-Hgm"/>
-                            <constraint firstItem="Zhh-DW-zEi" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="kNK-lj-XFh"/>
+                            <constraint firstItem="xBn-hv-PEn" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="IRd-Gt-Ruu"/>
+                            <constraint firstItem="xBn-hv-PEn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JOi-Ab-Xk8"/>
+                            <constraint firstItem="xBn-hv-PEn" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="hrd-dZ-s5e"/>
+                            <constraint firstItem="xBn-hv-PEn" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" constant="-44" id="luQ-1z-7o4"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -40,9 +37,6 @@
     </scenes>
     <resources>
         <image name="launchScreen.png" width="1125" height="2436"/>
-        <systemColor name="secondarySystemGroupedBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
