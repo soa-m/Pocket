@@ -55,6 +55,8 @@ class newPocketViewController: UIViewController,UITextFieldDelegate {
             UIAlertAction(title:"OK", style: .default, handler: nil)
         )
         present(alert, animated: true, completion: nil)
+        subject = -1
+        color = -1
         loadView()
         viewDidLoad()
         

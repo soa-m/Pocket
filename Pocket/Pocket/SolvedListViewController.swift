@@ -1,5 +1,5 @@
 //
-//  ListViewController.swift
+//  SolvedListViewController.swift
 //  Pocket
 //
 //  Created by 松村奏和 on 2021/08/13.
@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 
-class ListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout,UINavigationControllerDelegate {
+class SolvedListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout,UINavigationControllerDelegate {
     
 
     let realm = try! Realm()
@@ -32,7 +32,7 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let results = realm.objects(Pocket.self).filter("solved = false")
+        let results = realm.objects(Pocket.self).filter("solved = true")
         return results.count // 表示するセルの数
         }
         
@@ -45,7 +45,7 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
             let imageView = cell.contentView.viewWithTag(1) as! UIImageView
             let label = cell.contentView.viewWithTag(2) as! UILabel
             // 画像配列の番号で指定された要素の名前の画像をUIImageとする
-            let results = realm.objects(Pocket.self).filter("solved = false")
+            let results = realm.objects(Pocket.self).filter("solved = true")
             var Images :[String]
             Images = []
             let count = results.count
@@ -82,7 +82,7 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func navigationController(_ navigatioinController : UINavigationController, willShow viewController:UIViewController, animated: Bool){
 
-        if let controller = viewController as? PocketDetailViewController{
+        if let controller = viewController as? SolvedDetailViewController{
             controller.pocketId = tapped
 
         }
@@ -100,3 +100,4 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
     */
 
 }
+
