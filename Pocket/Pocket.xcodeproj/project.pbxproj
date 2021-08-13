@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D324EAD926C56E8400D3F824 /* SubjectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324EAD826C56E8400D3F824 /* SubjectTableViewController.swift */; };
+		D324EADB26C65C4700D3F824 /* ColorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324EADA26C65C4700D3F824 /* ColorTableViewController.swift */; };
 		D36136CA26C4AC3D00A24CC7 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = D36136C926C4AC3D00A24CC7 /* Realm */; };
 		D36136CC26C4AC3D00A24CC7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D36136CB26C4AC3D00A24CC7 /* RealmSwift */; };
 		D36136CE26C4ACB100A24CC7 /* pocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36136CD26C4ACB100A24CC7 /* pocket.swift */; };
@@ -48,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D324EAD826C56E8400D3F824 /* SubjectTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectTableViewController.swift; sourceTree = "<group>"; };
+		D324EADA26C65C4700D3F824 /* ColorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTableViewController.swift; sourceTree = "<group>"; };
 		D36136CD26C4ACB100A24CC7 /* pocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pocket.swift; sourceTree = "<group>"; };
 		D36136CF26C4C5FF00A24CC7 /* addPocketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPocketViewController.swift; sourceTree = "<group>"; };
 		D3A546E526C4DB2900659D54 /* selectSubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectSubjectViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +147,8 @@
 				D36136CF26C4C5FF00A24CC7 /* addPocketViewController.swift */,
 				D3A546E526C4DB2900659D54 /* selectSubjectViewController.swift */,
 				D3A546E726C4E89E00659D54 /* newPocketViewController.swift */,
+				D324EAD826C56E8400D3F824 /* SubjectTableViewController.swift */,
+				D324EADA26C65C4700D3F824 /* ColorTableViewController.swift */,
 			);
 			path = Pocket;
 			sourceTree = "<group>";
@@ -305,6 +311,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3E25BF02650012A00C94C9E /* ViewController.swift in Sources */,
+				D324EADB26C65C4700D3F824 /* ColorTableViewController.swift in Sources */,
+				D324EAD926C56E8400D3F824 /* SubjectTableViewController.swift in Sources */,
 				D36136CE26C4ACB100A24CC7 /* pocket.swift in Sources */,
 				D3E25BEC2650012A00C94C9E /* AppDelegate.swift in Sources */,
 				D3E25BEE2650012A00C94C9E /* SceneDelegate.swift in Sources */,
