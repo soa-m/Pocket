@@ -11,28 +11,53 @@ import RealmSwift
 class newPocketViewController: UIViewController,UITextFieldDelegate {
     
     let realm = try! Realm()
+    let dataList: Array = ["国語","数学", "理科","社会","哲学","体育","音楽","技術","アイデア","その他"]
+    let colorList: Array = ["白","赤","青","黄","紫","ピンク","紺","緑","オレンジ","水色"]
+    
     
     @IBOutlet var titleTextField: UITextField!
     @IBOutlet var contentTextField: UITextField!
     
     @IBOutlet var label: UILabel!
-    var var1 :String!
+    @IBOutlet var label2: UILabel!
+    var subject :Int! = -1
+    var color :Int! = -1
     
     @IBAction func save(){
         let now: Date = Date()
         let title: String = titleTextField.text!
         let content: String = contentTextField.text!
-        let subject: String = label.text ?? ""
         
-            let newPocket = Pocket()
+        let newPocket = Pocket()
         newPocket.title = title
         newPocket.content = content
         newPocket.time = now
         newPocket.subject = subject
-            
+        newPocket.color = color
+        
+        if subject != -1 && color != -1 && title != "" && content != ""{
             try! realm.write {
                 realm.add(newPocket)
             }
+        
+        let alert: UIAlertController = UIAlertController(title: "成功", message: "保存しました", preferredStyle: .alert)
+        
+        alert.addAction(
+            UIAlertAction(title:"OK", style: .default, handler: nil)
+        )
+        present(alert, animated: true, completion: nil)
+        loadView()
+        viewDidLoad()
+        }
+        let alert: UIAlertController = UIAlertController(title: "失敗", message: "全ての項目を入力してください", preferredStyle: .alert)
+        
+        alert.addAction(
+            UIAlertAction(title:"OK", style: .default, handler: nil)
+        )
+        present(alert, animated: true, completion: nil)
+        loadView()
+        viewDidLoad()
+        
     }
 
     override func viewDidLoad() {
@@ -42,12 +67,18 @@ class newPocketViewController: UIViewController,UITextFieldDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidLoad()
-        if let var1 = var1{
-        label.text = var1
-        print(var1)
+        super.viewWillAppear(animated)
+        if subject == -1{
+            label.text = "選択してください"
+        }else{
+            label.text = dataList[subject]
         }
-        print("var1はnil！！")
+        
+        if color == -1{
+            label2.text = "選択してください"
+        }else{
+            label2.text = colorList[color]
+        }
     }
 
     /*

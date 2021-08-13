@@ -7,8 +7,8 @@
 
 import UIKit
 
-class SubjectTableViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
-    
+class SubjectTableViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UINavigationControllerDelegate {
+    var  tapped :Int = 0
     let dataList: Array = ["国語","数学", "理科","社会","哲学","体育","音楽","技術","アイデア","その他"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -20,12 +20,28 @@ class SubjectTableViewController: UIViewController,UITableViewDelegate,UITableVi
             cell.textLabel!.text = dataList[indexPath.row]
             return cell
         }
+    
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tapped = indexPath.row
+    }
+        
+
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationController?.delegate = self
         
         // Do any additional setup after loading the view.
+    }
+    
+    
+    func navigationController(_ navigatioinController : UINavigationController, willShow viewController:UIViewController, animated: Bool){
+        
+        if let controller = viewController as? newPocketViewController{
+            controller.subject = tapped
+        }
     }
     
 

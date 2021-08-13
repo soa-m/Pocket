@@ -11,7 +11,7 @@ import RealmSwift
 class Pocket: Object {
     @objc dynamic var title: String = ""
     @objc dynamic var content: String = ""
-    @objc dynamic var subject: String = ""
-    @objc dynamic var color: Int = 0
+    @objc dynamic var subject: Int = -1
+    @objc dynamic var color: Int = -1
     @objc dynamic var time: Date = Date()
 }

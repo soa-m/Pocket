@@ -7,9 +7,10 @@
 
 import UIKit
 
-class ColorTableViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class ColorTableViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UINavigationControllerDelegate {
     
     let dataList: Array = ["白","赤","青","黄","紫","ピンク","紺","緑","オレンジ","水色"]
+    var  tapped :Int = 0
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return dataList.count
@@ -21,10 +22,21 @@ class ColorTableViewController: UIViewController,UITableViewDelegate,UITableView
             return cell
         }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tapped = indexPath.row
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.delegate = self
 
         // Do any additional setup after loading the view.
+    }
+    
+    func navigationController(_ navigatioinController : UINavigationController, willShow viewController:UIViewController, animated: Bool){
+        
+        if let controller = viewController as? newPocketViewController{
+            controller.color = tapped
+        }
     }
     
 
