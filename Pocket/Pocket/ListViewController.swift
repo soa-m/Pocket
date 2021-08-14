@@ -33,7 +33,7 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let results = realm.objects(Pocket.self).filter("solved = false")
+        let results = realm.objects(Pocket.self).filter("solved = false").sorted(byKeyPath: "time", ascending: false)
         return results.count // 表示するセルの数
         }
         
@@ -46,7 +46,7 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
             let imageView = cell.contentView.viewWithTag(1) as! UIImageView
             let label = cell.contentView.viewWithTag(2) as! UILabel
             // 画像配列の番号で指定された要素の名前の画像をUIImageとする
-            let results = realm.objects(Pocket.self).filter("solved = false")
+            let results = realm.objects(Pocket.self).filter("solved = false").sorted(byKeyPath: "time", ascending: false)
             var Images :[String]
             Images = []
             let count = results.count

@@ -22,7 +22,7 @@ class SolvedDetailViewController: UIViewController,UINavigationControllerDelegat
         
 
         // Do any additional setup after loading the view.
-        let results = realm.objects(Pocket.self).filter("solved = true")
+        let results = realm.objects(Pocket.self).filter("solved = true").sorted(byKeyPath: "time", ascending: false)
         let pocketTitle = results[pocketId].title
         let pocketContent = results[pocketId].content
         let pocketImage = results[pocketId].color
@@ -39,7 +39,7 @@ class SolvedDetailViewController: UIViewController,UINavigationControllerDelegat
     
     @IBAction func deletePocket(){
         //新しい順にしたらcount-(マイナス)idにする!!
-        let results = realm.objects(Pocket.self).filter("solved = true")
+        let results = realm.objects(Pocket.self).filter("solved = true").sorted(byKeyPath: "time", ascending: false)
         let object = results[pocketId]
         try! realm.write{
             realm.delete(object)

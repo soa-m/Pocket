@@ -22,7 +22,7 @@ class PocketDetailViewController: UIViewController,UINavigationControllerDelegat
         
 
         // Do any additional setup after loading the view.
-        let results = realm.objects(Pocket.self).filter("solved = false")
+        let results = realm.objects(Pocket.self).filter("solved = false").sorted(byKeyPath: "time", ascending: false)
         let pocketTitle = results[pocketId].title
         let pocketContent = results[pocketId].content
         let pocketImage = results[pocketId].color
@@ -36,7 +36,7 @@ class PocketDetailViewController: UIViewController,UINavigationControllerDelegat
     
     @IBAction func deletePocket(){
         //新しい順にしたらcount-(マイナス)idにする!!
-        let results = realm.objects(Pocket.self).filter("solved = false")
+        let results = realm.objects(Pocket.self).filter("solved = false").sorted(byKeyPath: "time", ascending: false)
         let object = results[pocketId]
         try! realm.write{
             realm.delete(object)
@@ -45,7 +45,7 @@ class PocketDetailViewController: UIViewController,UINavigationControllerDelegat
     }
     
     @IBAction func solve(){
-        let results = realm.objects(Pocket.self).filter("solved = false")
+        let results = realm.objects(Pocket.self).filter("solved = false").sorted(byKeyPath: "time", ascending: false)
         let object = results[pocketId]
         let solution :String = solutionTextField.text!
         try! realm.write{
