@@ -13,6 +13,7 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
 
     let realm = try! Realm()
     var tapped :Int = -1
+    let width: CGFloat = UIScreen.main.bounds.size.width
     @IBOutlet var collectionView: UICollectionView!
     let photos = ["pocket_12","pocket_9","pocket_1","pocket_14","pocket_8","pocket_6","pocket_11","pocket_7","pocket_2","pocket_4"]
     override func viewDidLoad() {
@@ -71,7 +72,14 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
      
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             let horizontalSpace : CGFloat = 20
-            let cellSize : CGFloat = self.view.bounds.width / 2 - horizontalSpace
+            var cellSize : CGFloat = CGFloat()
+            if width < 768 {
+                cellSize = self.view.bounds.width / 2 - horizontalSpace
+            }else if width < 1000{
+                cellSize = self.view.bounds.width / 3 - horizontalSpace
+            }else{
+                cellSize = self.view.bounds.width / 5 - horizontalSpace
+            }
             return CGSize(width: cellSize, height: cellSize)
         }
     
