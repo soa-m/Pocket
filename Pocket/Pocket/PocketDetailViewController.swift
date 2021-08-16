@@ -48,9 +48,11 @@ class PocketDetailViewController: UIViewController,UINavigationControllerDelegat
         let results = realm.objects(Pocket.self).filter("solved = false").sorted(byKeyPath: "time", ascending: false)
         let object = results[pocketId]
         let solution :String = solutionTextField.text!
+        let now: Date = Date()
         try! realm.write{
             object.solved = true
             object.solution = solution
+            object.solvedTime = now
         }
         self.navigationController?.popViewController(animated: true)
     }

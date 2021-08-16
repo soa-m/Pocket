@@ -13,6 +13,7 @@
 		D324EAE026C65C4700D3F824 /* PocketDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324EADF26C65C4700D3F824 /* PocketDetailViewController.swift */; };
 		D324EAE226C65C4700D3F824 /* SolvedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324EAE126C65C4700D3F824 /* SolvedListViewController.swift */; };
 		D324EAE426C65C4700D3F824 /* SolvedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324EAE326C65C4700D3F824 /* SolvedDetailViewController.swift */; };
+		D34684F926C7BA0D00EAC288 /* SamplePieprogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34684F826C7BA0D00EAC288 /* SamplePieprogViewController.swift */; };
 		D36136CA26C4AC3D00A24CC7 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = D36136C926C4AC3D00A24CC7 /* Realm */; };
 		D36136CC26C4AC3D00A24CC7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D36136CB26C4AC3D00A24CC7 /* RealmSwift */; };
 		D36136CE26C4ACB100A24CC7 /* pocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36136CD26C4ACB100A24CC7 /* pocket.swift */; };
@@ -58,6 +59,7 @@
 		D324EADF26C65C4700D3F824 /* PocketDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketDetailViewController.swift; sourceTree = "<group>"; };
 		D324EAE126C65C4700D3F824 /* SolvedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolvedListViewController.swift; sourceTree = "<group>"; };
 		D324EAE326C65C4700D3F824 /* SolvedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolvedDetailViewController.swift; sourceTree = "<group>"; };
+		D34684F826C7BA0D00EAC288 /* SamplePieprogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplePieprogViewController.swift; sourceTree = "<group>"; };
 		D36136CD26C4ACB100A24CC7 /* pocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pocket.swift; sourceTree = "<group>"; };
 		D3A546E726C4E89E00659D54 /* newPocketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newPocketViewController.swift; sourceTree = "<group>"; };
 		D3D4E4492650C2450005B9B9 /* PageViewContoroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewContoroller.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				D324EADF26C65C4700D3F824 /* PocketDetailViewController.swift */,
 				D324EAE126C65C4700D3F824 /* SolvedListViewController.swift */,
 				D324EAE326C65C4700D3F824 /* SolvedDetailViewController.swift */,
+				D34684F826C7BA0D00EAC288 /* SamplePieprogViewController.swift */,
 			);
 			path = Pocket;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				D324EAE026C65C4700D3F824 /* PocketDetailViewController.swift in Sources */,
 				D3D4E4542651EF1F0005B9B9 /* IndexViewController.swift in Sources */,
 				D3D4E44C2650CF780005B9B9 /* SecondViewController.swift in Sources */,
+				D34684F926C7BA0D00EAC288 /* SamplePieprogViewController.swift in Sources */,
 				D324EADD26C65C4700D3F824 /* ListViewController.swift in Sources */,
 				D3D4E44E2650CF8E0005B9B9 /* ThirdViewController.swift in Sources */,
 				D3D4E44A2650C2450005B9B9 /* PageViewContoroller.swift in Sources */,
