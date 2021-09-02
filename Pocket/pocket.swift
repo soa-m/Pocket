@@ -14,6 +14,7 @@ class Pocket: Object {
     @objc dynamic var content: String = ""
     @objc dynamic var subject: Int = -1
     @objc dynamic var color: Int = -1
+    @objc dynamic var grade: Int = -1
     @objc dynamic var time: Date = Date()
     @objc dynamic var solvedTime: Date = Date()
     @objc dynamic var solved: Bool = false
