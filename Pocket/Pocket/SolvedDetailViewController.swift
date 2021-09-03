@@ -34,6 +34,9 @@ class SolvedDetailViewController: UIViewController,UINavigationControllerDelegat
         image.image = images
         
         solutionLabel.text = pocketSolution
+        titleLabel.font = UIFont(name:"Mamelon-5-Hi-Regular", size: 34.0)
+        contentLabel.font = UIFont(name:"Mamelon-5-Hi-Regular", size: 20.0)
+        solutionLabel.font = UIFont(name:"Mamelon-5-Hi-Regular", size: 20.0)
     }
     
     

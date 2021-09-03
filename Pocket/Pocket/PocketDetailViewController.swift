@@ -16,26 +16,27 @@ class PocketDetailViewController: UIViewController,UINavigationControllerDelegat
     @IBOutlet var titleLabel  :UILabel!
     @IBOutlet var contentLabel :UILabel!
     @IBOutlet var solutionTextField: UITextField!
+ 
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        
-
         // Do any additional setup after loading the view.
         let results = realm.objects(Pocket.self).filter("solved = false").sorted(byKeyPath: "time", ascending: false)
         let pocketTitle = results[pocketId].title
         let pocketContent = results[pocketId].content
         let pocketImage = results[pocketId].color
-        
         titleLabel.text = pocketTitle
         contentLabel.text = pocketContent
         let images = UIImage(named: photos[pocketImage])
         image.image = images
+        titleLabel.font = UIFont(name:"Mamelon-5-Hi-Regular", size: 34.0)
+        contentLabel.font = UIFont(name:"Mamelon-5-Hi-Regular", size: 20.0)
     }
     
     
     @IBAction func deletePocket(){
-        //新しい順にしたらcount-(マイナス)idにする!!
+
         let results = realm.objects(Pocket.self).filter("solved = false").sorted(byKeyPath: "time", ascending: false)
         let object = results[pocketId]
         try! realm.write{
@@ -56,7 +57,7 @@ class PocketDetailViewController: UIViewController,UINavigationControllerDelegat
         }
         self.navigationController?.popViewController(animated: true)
     }
-
+    
     /*
     // MARK: - Navigation
 

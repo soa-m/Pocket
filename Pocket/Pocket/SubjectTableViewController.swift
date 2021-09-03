@@ -8,7 +8,7 @@
 import UIKit
 
 class SubjectTableViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UINavigationControllerDelegate {
-    var  tapped :Int = 0
+    var  tapped :Int = -1
     let dataList: Array = ["国語","数学", "理科","社会","哲学","体育","音楽","技術","アイデア","その他"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

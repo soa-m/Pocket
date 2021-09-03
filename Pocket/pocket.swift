@@ -9,6 +9,7 @@ import Foundation
 import RealmSwift
 
 class Pocket: Object {
+    @objc dynamic var id: Int = 0
     @objc dynamic var title: String = ""
     @objc dynamic var content: String = ""
     @objc dynamic var subject: Int = -1
@@ -17,4 +18,9 @@ class Pocket: Object {
     @objc dynamic var solvedTime: Date = Date()
     @objc dynamic var solved: Bool = false
     @objc dynamic var solution: String = ""
+    
+    //Primary Keyの設定
+        override static func primaryKey() -> String? {
+            return "id"
+        }
 }

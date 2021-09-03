@@ -7,15 +7,21 @@
 
 import UIKit
 import RealmSwift
+import UserNotifications
+import os
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    var window: UIWindow?
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         // first time to launch this app
+        
+        
         
         let config = Realm.Configuration(
             schemaVersion: 1,
@@ -32,6 +38,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         pageControl.pageIndicatorTintColor = UIColor.gray
         pageControl.currentPageIndicatorTintColor = UIColor.systemBlue
         
+        // 通知許可の取得
+        UNUserNotificationCenter.current()
+                    .requestAuthorization(options: [.badge, .sound, .alert], completionHandler: { (granted, error) in
+                        if !granted {
+                            let alert = UIAlertController(title: "エラー", message: "プッシュ通知が拒否されています。設定から有効にしてください。", preferredStyle: .alert)
+                            let closeAction = UIAlertAction(title: "閉じる", style: .default) { _ in exit(1) }
+                            alert.addAction(closeAction)
+                            self.window?.rootViewController?.present(alert, animated: true, completion: nil)
+                        }
+                    })
+                UNUserNotificationCenter.current().delegate = self
         return true
     }
 
@@ -51,4 +68,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(
+        _ center: UNUserNotificationCenter,
+        willPresent notification: UNNotification,
+        withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void)
+    {
+        completionHandler([[.banner, .list, .sound]])
+    }
+}
+
+
 

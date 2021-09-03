@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import UserNotifications
 
 class newPocketViewController: UIViewController,UITextFieldDelegate {
     
@@ -24,11 +25,13 @@ class newPocketViewController: UIViewController,UITextFieldDelegate {
     var color :Int! = -1
     
     @IBAction func save(){
+        let count = realm.objects(Pocket.self).count
         let now: Date = Date()
         let title: String = titleTextField.text!
         let content: String = contentTextField.text!
-        
+        print(count)
         let newPocket = Pocket()
+        newPocket.id = count + 1
         newPocket.title = title
         newPocket.content = content
         newPocket.time = now
@@ -57,6 +60,7 @@ class newPocketViewController: UIViewController,UITextFieldDelegate {
         present(alert, animated: true, completion: nil)
         subject = -1
         color = -1
+        setNtf(self)
         loadView()
         viewDidLoad()
         
@@ -82,6 +86,28 @@ class newPocketViewController: UIViewController,UITextFieldDelegate {
             label2.text = colorList[color]
         }
     }
+        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            // キーボードを閉じる
+            textField.resignFirstResponder()
+            return true
+        }
+    
+    func setNtf(_ sender: Any) {
+        let con = UNMutableNotificationContent()
+        let title: String = titleTextField.text!
+        let content: String = contentTextField.text!
+        let count = realm.objects(Pocket.self).count
+        print(count)
+        con.title = title
+        con.body = content
+        con.sound = UNNotificationSound.default
+        
+        let trigger: UNNotificationTrigger
+        trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: false)
+        let request = UNNotificationRequest(identifier: String(count),content: con,trigger: trigger)
+        // 通知の登録
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        }
 
     /*
     // MARK: - Navigation

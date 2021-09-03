@@ -84,6 +84,7 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
         }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //let results = realm.objects(Pocket.self).filter("solved = false").sorted(byKeyPath: "time", ascending: false)
         tapped = indexPath.row
         self.performSegue(withIdentifier: "ToDetail", sender: nil)
     }
