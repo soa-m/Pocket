@@ -24,7 +24,6 @@
 		D3D4E4522650DC3D0005B9B9 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D4E4512650DC3D0005B9B9 /* FirstViewController.swift */; };
 		D3D4E4542651EF1F0005B9B9 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D4E4532651EF1F0005B9B9 /* IndexViewController.swift */; };
 		D3E1486726DFB1210094D5EC /* Mamelon-5-Hi-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3E1486626DFB1200094D5EC /* Mamelon-5-Hi-Regular.otf */; };
-		D3E1486926DFC4360094D5EC /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E1486826DFC4360094D5EC /* SettingViewController.swift */; };
 		D3E25BEC2650012A00C94C9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E25BEB2650012A00C94C9E /* AppDelegate.swift */; };
 		D3E25BEE2650012A00C94C9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E25BED2650012A00C94C9E /* SceneDelegate.swift */; };
 		D3E25BF02650012A00C94C9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E25BEF2650012A00C94C9E /* ViewController.swift */; };
@@ -70,7 +69,6 @@
 		D3D4E4512650DC3D0005B9B9 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		D3D4E4532651EF1F0005B9B9 /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
 		D3E1486626DFB1200094D5EC /* Mamelon-5-Hi-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mamelon-5-Hi-Regular.otf"; sourceTree = "<group>"; };
-		D3E1486826DFC4360094D5EC /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		D3E25BE82650012A00C94C9E /* Pocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3E25BEB2650012A00C94C9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3E25BED2650012A00C94C9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -163,7 +161,6 @@
 				D324EAE126C65C4700D3F824 /* SolvedListViewController.swift */,
 				D324EAE326C65C4700D3F824 /* SolvedDetailViewController.swift */,
 				D34684F826C7BA0D00EAC288 /* SamplePieprogViewController.swift */,
-				D3E1486826DFC4360094D5EC /* SettingViewController.swift */,
 			);
 			path = Pocket;
 			sourceTree = "<group>";
@@ -331,7 +328,6 @@
 				D324EAD926C56E8400D3F824 /* SubjectTableViewController.swift in Sources */,
 				D36136CE26C4ACB100A24CC7 /* pocket.swift in Sources */,
 				D324EAE426C65C4700D3F824 /* SolvedDetailViewController.swift in Sources */,
-				D3E1486926DFC4360094D5EC /* SettingViewController.swift in Sources */,
 				D3E25BEC2650012A00C94C9E /* AppDelegate.swift in Sources */,
 				D3E25BEE2650012A00C94C9E /* SceneDelegate.swift in Sources */,
 				D324EAE026C65C4700D3F824 /* PocketDetailViewController.swift in Sources */,

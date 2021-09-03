@@ -60,7 +60,7 @@ class newPocketViewController: UIViewController,UITextFieldDelegate {
         present(alert, animated: true, completion: nil)
         subject = -1
         color = -1
-        setNtf(self)
+ //       setNtf(self)
         loadView()
         viewDidLoad()
         
@@ -92,22 +92,24 @@ class newPocketViewController: UIViewController,UITextFieldDelegate {
             return true
         }
     
-    func setNtf(_ sender: Any) {
-        let con = UNMutableNotificationContent()
-        let title: String = titleTextField.text!
-        let content: String = contentTextField.text!
-        let count = realm.objects(Pocket.self).count
-        print(count)
-        con.title = title
-        con.body = content
-        con.sound = UNNotificationSound.default
-        
-        let trigger: UNNotificationTrigger
-        trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: false)
-        let request = UNNotificationRequest(identifier: String(count),content: con,trigger: trigger)
-        // 通知の登録
-        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-        }
+//    func setNtf(_ sender: Any) {
+//        let con = UNMutableNotificationContent()
+//        let title: String = titleTextField.text!
+//        let content: String = contentTextField.text!
+//        let count = realm.objects(Pocket.self).count
+//        print(count)
+//        con.title = title
+//        con.body = content
+//        con.sound = UNNotificationSound.default
+//        print(title)
+//        print(content)
+//
+//        let trigger: UNNotificationTrigger
+//        trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: false)
+//        let request = UNNotificationRequest(identifier: String(count),content: con,trigger: trigger)
+//        // 通知の登録
+//        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+//        }
 
     /*
     // MARK: - Navigation
